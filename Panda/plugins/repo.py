@@ -15,5 +15,5 @@ async def _(event):
     "animation command"
     event = await edit_or_reply(
         event,
-        "**╭┄┅┯┅┄┄┅┯┅┄╮**\n\n [𝗣 𝗔 𝗡 𝗗 𝗔](https://github.com/ilhammansiz/PandaX_Userbot)\n\n [𝗢 𝗪 𝗡 𝗘 𝗥 𝗦](t.me/diemmmmmmmmmm)\n\n [GRUP SUPPORT](https://t.me/TEAMSquadUserbotSupport)\n\n**╰┄┅┷┅┄┄┅┷┅┄╯**\n",
+        "**╭━━━━━━━━━━━╮**\n\n [Repository](https://github.com/AftahBagas/new_userbot\n**╰━━━━━━━━━━━╯**\n **• Creator** [Creator Repo](https://t.me/robotrakitangakbagus)\n **• Editor** [Editor Repo](https://t.me/kanjengingsun)",
     )
