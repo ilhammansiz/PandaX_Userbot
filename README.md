@@ -9,7 +9,6 @@
     <img alt="BUILD IN" src="https://img.shields.io/badge/BUILD%20-Last Day-brightgreen"/>
            <a href="https://travis-ci.com/ilhammansiz/PandaX_Userbot.svg?branch=PandaUserbot" /></a>
     <a href="https://github.com/ilhammansiz/PandaX_Userbot/network/members"> <img src="https://img.shields.io/github/forks/ilhammansiz/PandaX_Userbot?logo=github&style=for-the-badge" /></a>
-           <a href="https://app.codacy.com/gh/ilhammansiz/PandaX_Userbot/dashboard"> <img src="https://img.shields.io/codacy/grade/a8f0747a964e4712818a28d2a7f4edd3?color=blue&logo=codacy&style=for-the-badge" alt="Codacy" /></a>
     <a href="https://github.com/ilhammansiz/PandaX_Userbot"> <img src="https://img.shields.io/github/repo-size/ilhammansiz/PandaX_Userbot?logo=github&style=for-the-badge" /></a>
     <a href="https://pypi.org/project/Telethon/"> <img src="https://img.shields.io/pypi/v/telethon?label=telethon&logo=pypi&logoColor=white&style=for-the-badge" /></a>
     <img alt="PYTHON" src="https://img.shields.io/badge/PYTHON-v3.9.0-blue?style=for-the-badge&logo=appveyor"/>
