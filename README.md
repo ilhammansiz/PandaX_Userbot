@@ -1,56 +1,70 @@
+
+# <p align="center">Panda Userbot</p>
+
 <img src="https://media.giphy.com/media/7LM3Nd9MvnWFO/giphy.gif">
 
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=ilhammansiz&label=Profile%20views&color=0e75b6&style=plastic" alt="ilhammansiz" /> </p>
+<p align="center">
+    <img alt="Panda Version" src="https://img.shields.io/badge/Panda%20Version-27.03.2022-brightgreen"/>
+    <img alt="BUILD IN" src="https://img.shields.io/badge/BUILD%20-Last Day-brightgreen"/>
+           <a href="https://travis-ci.com/ilhammansiz/PandaX_Userbot.svg?branch=PandaUserbot" /></a>
+    <a href="https://github.com/ilhammansiz/PandaX_Userbot/network/members"> <img src="https://img.shields.io/github/forks/ilhammansiz/PandaX_Userbot?logo=github&style=for-the-badge" /></a>
+           <a href="https://app.codacy.com/gh/ilhammansiz/PandaX_Userbot/dashboard"> <img src="https://img.shields.io/codacy/grade/a8f0747a964e4712818a28d2a7f4edd3?color=blue&logo=codacy&style=for-the-badge" alt="Codacy" /></a>
+    <a href="https://github.com/ilhammansiz/PandaX_Userbot"> <img src="https://img.shields.io/github/repo-size/ilhammansiz/PandaX_Userbot?logo=github&style=for-the-badge" /></a>
+    <a href="https://pypi.org/project/Telethon/"> <img src="https://img.shields.io/pypi/v/telethon?label=telethon&logo=pypi&logoColor=white&style=for-the-badge" /></a>
+    <img alt="PYTHON" src="https://img.shields.io/badge/PYTHON-v3.9.0-blue?style=for-the-badge&logo=appveyor"/>
+   </p>
 
 Panda_Userbot adalah userbot Telegram modular yang berjalan di Python3 dengan database sqlalchemy.
 
 Berbasis [Cat](https://github.com/sandy1709/catuserbot) ➡ [Ultroid](https://github.com/TeamUltroid/Ultroid) ➡ [Userge](https://github.com/UsergeTeam/Userge) & [Uniborg](https://github.com/udf/uniborg) userbot. Saya membuat repository ini untuk memilih dan menambahkan beberapa modul yang saya butuhkan dengan banyak perubahan, fitur dan modul.
 
 ## Disclaimer
+
 ```
 Saya tidak bertanggung jawab atas penyalahgunaan bot ini.
 Bot ini dimaksudkan untuk bersenang-senang sekaligus membantu Anda
 mengelola grup secara efisien dan mengotomatiskan beberapa hal yang membosankan.
-Gunakan bot ini dengan risiko Anda
+Gunakan bot ini dengan risiko Anda sendiri, dan gunakan dengan bijak.
 ```
-## TUTORIAL DEPLOY VIA BOT TELEGRAM SIMPLE Klik Disini👇🏻👇🏻
-[TUTORIAL](https://t.me/UserbotTEAM_Tutorial/25)
- 
-## Deploy Di heroku via Web 👇🏻
-## Jika tidak bisa dideploy via web silahkan fork 
-## Jika anda ingin fork dan mengedit file fork silahkan ganti link githubnya di start.sh Terimakasih😘
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-[![GitHub issues](https://img.shields.io/github/issues/ilhammansiz/PandaX_Userbot?&style=plastic&logo=github)](https://github.com/ilhammansiz/PandaX_Userbot/issues)
-[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/ilhammansiz/PandaX_Userbot?&style=plastic&logo=github)](https://github.com/ilhammansiz/PandaX_Userbot/graphs/commit-activity)
-[![GitHub contributors](https://img.shields.io/github/contributors/mrxxp/PandaX_Userbot?&style=plastic&logo=github)](https://GitHub.com/ilhammansiz/PandaX_Userbot/graphs/contributors/)
-<p align="justify">
-<a href="https://pypi.org/project/Telethon/"> <img src="https://img.shields.io/pypi/v/telethon?label=telethon&logo=pypi&logoColor=white&style=for-the-badge" /></a>
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
-[![Python](https://img.shields.io/badge/Python-v3.9.9-blue)](https://www.python.org/)
+<details>
+    <summary> <b>🔗 Generate String Session</b></summary><br/>
 
-[![PR Closed](https://img.shields.io/github/issues-pr-closed/ilhammansiz/PandaX_Userbot?&style=flat-square&logo=github)](https://github.com/ilhammansiz/PandaX_Userbot/pulls?q=is:closed)
-[![GitHub stars](https://img.shields.io/github/stars/ilhammansiz/pandax_userbot?&style=flat-square&logo=github)](https://github.com/ilhammansiz/pandax_Userbot/stargazers)
-[![Forks](https://img.shields.io/github/forks/ilhammansiz/PandaX_Userbot?style=flat-square&color=orange)](https://github.com/ilhammansiz/PandaX_Userbot/fork)
-[![Size](https://img.shields.io/github/repo-size/ilhammansiz/PandaX_Userbot?style=flat-square&color=green)](https://github.com/ilhammansiz/PandaX_Userbot/)   
+<p align="center"><a href="https://t.me/TeamUserbotSession_bot"><img src="https://img.shields.io/badge/Ambil%20String%20Session-blue?style=for-the-badge&logo=telegram" width="200"" /></a></p>
 
-<p align="left">
-  <a href="https://github.com/ilhammansiz/PandaX_Userbot/blob/PandaUserbot/LICENSE"><img src="https://img.shields.io/github/license/ilhammansiz/PandaX_Userbot?&style=social&logo=github">
-  </a></p>
+</details>
 
+<details>
+    <summary> <b>🔗 Deploy Panda Userbot</b></summary><br/>
 
+<p align="center"><a href="https://userbotindo.tech"><img src="https://img.shields.io/badge/Deploy%20Lewat%20Web%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="200"" /></a></p>
 
-## Support
+<p align="center"><a href="https://t.me/PandaUserbot"><img src="https://img.shields.io/badge/Deploy%20Lewat%20Bot%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="200"" /></a></p>
+
+</details>
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+
+### Update & Support
    <a href="https://t.me/PandaUserbot"><img src="https://img.shields.io/badge/Channel%20Support%3F-yes-green?&style=flat-square?&logo=telegram" width=220px></a></p>
    <a href="https://t.me/TEAMSquadUserbotSupport"><img src="https://img.shields.io/badge/Group%20Support%3F-yes-green?&style=flat-square?&logo=telegram" width=220px></a></p>
 
-## ☑ CREDITS
-  THANKS YOU VERRY MUCH FOR ALL
-*   [Telethon](https://github.com/LonamiWebs/Telethon)
-*   [TeamUltroid](https://github.com/TeamUltroid)
-*   [TeamUserge](https://github.com/UsergeTeam/Userge)
-*   [CatUserbot](https://github.com/sandy1709/catuserbot)
-*   [pytgcalls](https://github.com/MarshalX/tgcalls)
-*   [PandaX_Userbot](https://github.com/ilhammansiz/PandaX_Userbot)
-*   Dan Lainnya
+<details>
+    <summary>&#127942 <b>Credits</b></summary><br/>
+
+#### Thanks To [Everyone](https://github.com/ilhammansiz/PandaX_Userbot/graphs/contributors) Who Has Helped Make This Userbot Awesome!
+*   [AdekMaulana](https://github.com/adekmaulana) : ProjectBish
+*   [RaphielGang](https://github.com/RaphielGang) : Paperplane
+*   [TeamUltroid](https://github.com/TeamUltroid/Ultroid) :  UltroidUserbot
+*   [BianSepang](https://github.com/BianSepang/WeebProject) : WeebProject
+*   [Sandy1709](https://github.com/sandy1709/catuserbot) : CatUserbot
+</details>
+
+## License
+Licensed under [Raphielscape Public License](https://github.com/ilhammansiz/PandaX_Userbot/blob/PandaX_Userbot/LICENSE) - Version 1.d, February 2020
+
