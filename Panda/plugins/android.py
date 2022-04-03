@@ -6,12 +6,11 @@ import re
 from bs4 import BeautifulSoup
 from requests import get
 
-from . import edit_delete, edit_or_reply, pandaub
-
+from . import edit_delete, edit_or_reply, ilhammansiz_cmd
 plugin_category = "plugins"
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="magisk$",
     command=("magisk", plugin_category),
     info={
@@ -45,7 +44,7 @@ async def kakashi(event):
     await edit_or_reply(event, releases)
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="device(?: |$)(\S*)",
     command=("device", plugin_category),
     info={
@@ -83,7 +82,7 @@ async def device_info(event):
     await edit_or_reply(event, reply)
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="codename(?: |)([\S]*)(?: |)([\s\S]*)",
     command=("codename", plugin_category),
     info={
@@ -133,7 +132,7 @@ async def codename_info(event):
     await edit_or_reply(event, reply)
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="specs(?: |)([\S]*)(?: |)([\s\S]*)",
     command=("specs", plugin_category),
     info={
@@ -200,7 +199,7 @@ async def devices_specifications(event):
     await edit_or_reply(event, reply)
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="twrp(?: |$)(\S*)",
     command=("twrp", plugin_category),
     info={

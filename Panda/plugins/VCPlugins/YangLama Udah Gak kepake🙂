@@ -38,7 +38,7 @@ plugin_category = "music"
 
 
 
-@vcClient.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     command=("play", plugin_category),
     info={
         "header": "Play the song in voice chat.",
@@ -123,7 +123,7 @@ async def play_music_(event):
         )
 
 
-@vcClient.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     command=("playfrom", plugin_category),
     info={
         "header": "Play music from channel files at current chat...",
@@ -190,7 +190,7 @@ async def play_music_(event):
                 )
                 send_message = False
 
-@vcClient.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     command=("joinvc", plugin_category),
     info={
         "header": "Join the voice chat....",
@@ -216,7 +216,7 @@ async def join_(event):
         await ultSongs.vc_joiner()
 
 
-@vcClient.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     command=("leavevc", plugin_category),
     info={
         "header": "Leave vc the voice chat....",
@@ -247,7 +247,7 @@ async def leaver(event):
 
 
 
-@vcClient.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     command=("rejoin", plugin_category),
     info={
         "header": "Re-join the voice chat, incase of errors.",
@@ -276,7 +276,7 @@ async def rejoiner(event):
     await eor(event, "`Re-joining this voice chat.`")
 
 
-@vcClient.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     command=("queue", plugin_category),
     info={
         "header": "List the songs in queue..",
@@ -304,7 +304,7 @@ async def queue(event):
 
 
 
-@vcClient.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     command=("radio", plugin_category),
     info={
         "header": "Stream Live Radio m3u8 links..",
@@ -344,7 +344,7 @@ async def radio_mirchi(e):
     )
     await xx.delete()
 
-@vcClient.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     command=("ytlive", plugin_category),
     info={
         "header": "Stream Live YouTube..",
@@ -394,7 +394,7 @@ async def live_stream(e):
     await xx.delete()
     await ultSongs.group_call.start_audio(file)
 
-@vcClient.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     command=("skip", plugin_category),
     info={
         "header": "Skip the current song and play the next in queue, if any...",
@@ -418,7 +418,7 @@ async def skipper(event):
     ultSongs = Player(chat, event)
     await ultSongs.play_from_queue()
 
-@vcClient.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     command=("mutevc", plugin_category),
     info={
         "header": "Mute playback....",
@@ -443,7 +443,7 @@ async def mute(event):
     await ultSongs.group_call.set_is_mute(True)
     await eor(event, "`Muted playback in this chat.`")
 
-@vcClient.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     command=("unmutevc", plugin_category),
     info={
         "header": "Unmute playback....",
@@ -468,7 +468,7 @@ async def unmute(event):
     await ultSongs.group_call.set_is_mute(False)
     await eor(event, "`UnMuted playback in this chat.`")
 
-@vcClient.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     command=("pausevc", plugin_category),
     info={
         "header": "Pause playback....",
@@ -493,7 +493,7 @@ async def pauser(event):
     await ultSongs.group_call.set_pause(True)
     await eor(event, "`Paused playback in this chat.`")
 
-@vcClient.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     command=("resumevc", plugin_category),
     info={
         "header": "Resume playback....",
@@ -518,7 +518,7 @@ async def resumer(event):
     await ultSongs.group_call.set_pause(False)
     await eor(event, "`Resumed playback in this chat.`")
 
-@vcClient.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     command=("replay", plugin_category),
     info={
         "header": "Re-play the current song from the beginning.....",
@@ -543,7 +543,7 @@ async def replayer(event):
     ultSongs.group_call.restart_playout()
     await eor(event, "`Re-playing the current song.`")
 
-@vcClient.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     command=("videoplay", plugin_category),
     info={
         "header": "Stream Videos in chat. you can use remotely toolike {tr}videoplay @chat <input/reply>.....",
@@ -624,7 +624,7 @@ async def video_c(event):
     await ultSongs.group_call.start_video(song, with_audio=True)
     await xx.delete()
 
-@vcClient.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     command=("volume", plugin_category),
     info={
         "header": "Put number between 1 to 100....",
@@ -666,7 +666,7 @@ async def volume_setter(event):
         return await eor(event, "• Volume Changed to `{}%` •".format(vol))
 
 
-@vcClient.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     command=("ytplaylist", plugin_category),
     info={
         "header": "play whole playlist in voice chat...",

@@ -1,5 +1,5 @@
 git+https://github.com/1danish-00/carbon-now-sh-api-wrapper.git
 pybase64
 pymongo[srv]
-pytgcalls==3.0.0.dev21
-
+py-tgcalls
+git+https://github.com/yt-dlp/yt-dlp@master

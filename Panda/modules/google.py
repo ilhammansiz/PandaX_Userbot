@@ -17,7 +17,7 @@ from ..Config import Config
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers.functions import deEmojify
 from ..helpers.utils import reply_id
-from . import BOTLOG, BOTLOG_CHATID
+from . import BOTLOG, BOTLOG_CHATID, register
 
 opener = urllib.request.build_opener()
 useragent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36"
@@ -60,7 +60,7 @@ async def scam(results, lim):
     return imglinks
 
 
-@PandaBot.register(
+@register(
     pattern="gs ([\s\S]*)",
     command=("gs", plugin_category),
     help={
@@ -143,7 +143,7 @@ async def gsearch(q_event):
         )
 
 
-@PandaBot.register(
+@register(
     pattern="grs$",
     command=("grs", plugin_category),
     help={
@@ -217,7 +217,7 @@ async def _(event):
     await edit_or_reply(pandaevent, OUTPUT_STR, parse_mode="HTML", link_preview=False)
 
 
-@PandaBot.register(
+@register(
     pattern="reverse(?:\s|$)([\s\S]*)",
     command=("reverse", plugin_category),
     help={
@@ -288,7 +288,7 @@ async def _(img):
         )
 
 
-@PandaBot.register(
+@register(
     pattern="google(?:\s|$)([\s\S]*)",
     command=("google", plugin_category),
     help={

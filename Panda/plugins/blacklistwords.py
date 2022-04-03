@@ -2,16 +2,15 @@ import re
 
 from telethon.utils import get_display_name
 
-from Panda import PandaBot
 
 from ..core.managers import edit_or_reply
 from ..sql_helper import blacklist_sql as sql
 from ..utils import is_admin
-
+from . import ilhammansiz_cmd
 plugin_category = "modules"
 
 
-@PandaBot.ilhammansiz_cmd(incoming=True, groups_only=True)
+@ilhammansiz_cmd(incoming=True, groups_only=True)
 async def on_new_message(event):
     name = event.raw_text
     snips = sql.get_chat_blacklist(event.chat_id)
@@ -34,7 +33,7 @@ async def on_new_message(event):
             break
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="addblacklist(?:\s|$)([\s\S]*)",
     command=("addblacklist", plugin_category),
     info={
@@ -65,7 +64,7 @@ async def _(event):
     )
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="rmblacklist(?:\s|$)([\s\S]*)",
     command=("rmblacklist", plugin_category),
     info={
@@ -94,7 +93,7 @@ async def _(event):
     )
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="listblacklist$",
     command=("listblacklist", plugin_category),
     info={

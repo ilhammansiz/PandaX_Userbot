@@ -5,14 +5,13 @@ Available Commands:
 import telethon.password as pwd_mod
 from telethon.tl import functions
 
-from Panda import pandaub
-
+from . import ilhammansiz_cmd
 from ..Config import Config
 
 plugin_category = "plugins"
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="otransfer (.*)",
     command=("otransfer", plugin_category),
     info={

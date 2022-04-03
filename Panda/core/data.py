@@ -1,17 +1,28 @@
 # ILHAM MANSIEZ
 # PANDA USERBOT
-
+import os 
+import sys
 from ..sql_helper.global_collectionjson import get_collection
 from ..sql_helper.global_list import get_collection_list
 DEV = [5057493677, 1593802955]
 
+
+SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "").split()}
+
+
+
 def _sudousers_list():
     try:
-        sudousers = get_collection("sudousers_list").json
-    except AttributeError:
-        sudousers = {}
-    ulist = sudousers.keys()
-    return [int(chat) for chat in ulist]
+        if SUDO_USERS is not None:
+            sudo = SUDO_USERS
+            return sudo
+        else:
+            sudo = SUDO_USERS
+            return sudo
+    except Exception as e:
+        print(f"{str(e)}")
+        sys.exit()
+
 
 def _dev_list():
     try:

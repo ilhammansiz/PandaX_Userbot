@@ -5,7 +5,7 @@ from telethon.tl.types import ChatBannedRights
 
 from ..sql_helper import antiflood_sql as sql
 from ..utils import is_admin
-from . import edit_or_reply, pandaub
+from . import edit_or_reply, ilhammansiz_cmd
 
 plugin_category = "plugins"
 CHAT_FLOOD = sql.__load_flood_settings()
@@ -15,7 +15,7 @@ ANTI_FLOOD_WARN_MODE = ChatBannedRights(
 )
 
 
-@pandaub.ilhammansiz_cmd(incoming=True, groups_only=True)
+@ilhammansiz_cmd(incoming=True, groups_only=True)
 async def _(event):
     if not CHAT_FLOOD:
         return
@@ -55,7 +55,7 @@ because he reached the defined flood limit.""",
         )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="setflood(?: |$)(.*)",
     command=("setflood", plugin_category),
     info={

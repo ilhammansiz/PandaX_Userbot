@@ -1,14 +1,13 @@
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from Panda import pandaub
 
 from ..core.managers import edit_or_reply
-
+from . import ilhammansiz_cmd
 plugin_category = "plugins"
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="recognize ?(.*)",
     command=("recognize", plugin_category),
     info={

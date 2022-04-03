@@ -1,8 +1,7 @@
 
-from Panda import pandaub
 
 from ..core.managers import edit_or_reply
-
+from . import ilhammansiz_cmd
 plugin_category = "plugins"
 
 # ===========================================================================================
@@ -75,7 +74,7 @@ X = (
 # =========================================================================================
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="baby$",
     command=("baby", plugin_category),
     info={
@@ -87,7 +86,7 @@ async def baby(event):
     "Hi Baby art."
     await edit_or_reply(event, S)
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="pistol$",
     command=("pistol", plugin_category),
     info={
@@ -99,7 +98,7 @@ async def baby(event):
     "pistol art."
     await edit_or_reply(event, D)
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="hbd(?: |$)(.*)",
     command=("hbd", plugin_category),
     info={
@@ -119,7 +118,7 @@ async def hbd(event):
     )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="thanks$",
     command=("thanks", plugin_category),
     info={
@@ -133,7 +132,7 @@ async def gn(event):
 
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="gmg$",
     command=("gmg", plugin_category),
     info={
@@ -149,7 +148,7 @@ async def gm(event):
     )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="gmg2$",
     command=("gmg2", plugin_category),
     info={
@@ -165,7 +164,7 @@ async def gm(event):
     )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="gmg3$",
     command=("gmg3", plugin_category),
     info={
@@ -178,7 +177,7 @@ async def gm(event):
     await edit_or_reply(event, W)
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="gnt$",
     command=("gnt", plugin_category),
     info={
@@ -194,7 +193,7 @@ async def gn(event):
     )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="gnt2$",
     command=("gnt2", plugin_category),
     info={
@@ -210,7 +209,7 @@ async def gn(event):
     )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="gnt3$",
     command=("gnt3", plugin_category),
     info={
@@ -226,7 +225,7 @@ async def gn(event):
 # @PhycoNinja13b 's Part begin from here
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="hi(?: |$)(.*)",
     command=("hi", plugin_category),
     info={
@@ -249,7 +248,7 @@ async def hi(event):
     )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="cheer$",
     command=("cheer", plugin_category),
     info={
@@ -265,7 +264,7 @@ async def cheer(event):
     )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="getwell$",
     command=("getwell", plugin_category),
     info={
@@ -280,7 +279,7 @@ async def getwell(event):
     )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="luck$",
     command=("luck", plugin_category),
     info={
@@ -295,7 +294,7 @@ async def luck(event):
     )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="sprinkle$",
     command=("sprinkle", plugin_category),
     info={

@@ -4,6 +4,8 @@
 from Panda import PandaBot as pandaub
 
 from Panda.Config import Config
+from Panda.core.cmd_user import ilhammansiz_cmd, bot_cmd, register
+
 from Panda.core.inlinebot import *
 
 if Config.PRIVATE_GROUP_BOT_API_ID == 0:

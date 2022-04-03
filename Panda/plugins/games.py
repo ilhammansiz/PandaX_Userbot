@@ -1,9 +1,9 @@
-from . import pandaub
+from . import ilhammansiz_cmd
 
 plugin_category = "plugins"
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="xoagame$",
     command=("xoagame", plugin_category),
     info={

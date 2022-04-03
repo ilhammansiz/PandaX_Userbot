@@ -1,14 +1,13 @@
 import html
 
-from Panda import PandaBot
 
 from ..core.managers import edit_or_reply
 from ..sql_helper import warns_sql as sql
-
+from . import ilhammansiz_cmd
 plugin_category = "modules"
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="warn(?:\s|$)([\s\S]*)",
     command=("warn", plugin_category),
     info={
@@ -48,7 +47,7 @@ async def _(event):
     await edit_or_reply(event, reply)
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="warns",
     command=("warns", plugin_category),
     info={
@@ -82,7 +81,7 @@ async def _(event):
     await event.edit(text)
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="r(eset)?warns$",
     command=("resetwarns", plugin_category),
     info={

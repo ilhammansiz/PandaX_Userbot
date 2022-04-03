@@ -2,7 +2,7 @@ import json
 
 import requests
 
-from . import pandaub
+from . import ilhammansiz_cmd
 
 plugin_category = "plugins"
 
@@ -10,7 +10,7 @@ plugin_category = "plugins"
 PLACE = ""
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="adzan(?: |$)(.*)",
     command=("adzan", plugin_category),
     info={

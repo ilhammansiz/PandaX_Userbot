@@ -2,11 +2,10 @@ from asyncio import sleep
 
 from googletrans import LANGUAGES, Translator
 
-from Panda import pandaub
 
 from ..core.managers import edit_delete, edit_or_reply
 from ..sql_helper.globals import addgvar, gvarstatus
-from . import BOTLOG, BOTLOG_CHATID, deEmojify
+from . import BOTLOG, BOTLOG_CHATID, deEmojify, ilhammansiz_cmd
 
 plugin_category = "plugins"
 
@@ -23,7 +22,7 @@ async def getTranslate(text, **kwargs):
     return result
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="tl (.*)",
     command=("tl", plugin_category),
     info={
@@ -62,7 +61,7 @@ async def _(event):
         await edit_delete(event, f"**Error:**\n`{str(exc)}`", time=5)
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="tr(?: |$)([\s\S]*)",
     command=("tr", plugin_category),
     info={
@@ -103,7 +102,7 @@ async def translateme(trans):
         )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="lang (ai|trt) (.*)",
     command=("lang", plugin_category),
     info={

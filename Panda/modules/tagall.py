@@ -2,8 +2,7 @@ import asyncio
 import random
 import re
 
-
-from .. import PandaBot
+from . import ilhammansiz_cmd
 
 usernexp = re.compile(r"@(\w{3,32})\[(.+?)\]")
 nameexp = re.compile(r"\[([\w\S]+)\]\(tg://user\?id=(\d+)\)\[(.+?)\]")
@@ -17,7 +16,7 @@ class FlagContainer:
     is_active = False
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="mention(?: |$)(.*)",
     command=("mention", plugin_category),
     info={
@@ -41,7 +40,7 @@ async def _(event):
     )
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="emojitag(?: |$)(.*)",
     command=("emojitag", plugin_category),
     info={
@@ -87,7 +86,7 @@ async def _(event):
         FlagContainer.is_active = False
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="all(?: |$)(.*)",
     command=("all", plugin_category),
     info={

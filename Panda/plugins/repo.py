@@ -1,9 +1,9 @@
-from . import edit_or_reply, pandaub
+from . import edit_or_reply, ilhammansiz_cmd
 
 plugin_category = "plugins"
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="repo$",
     command=("repo", plugin_category),
     info={

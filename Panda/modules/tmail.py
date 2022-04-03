@@ -4,11 +4,10 @@ from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 from PIL import Image
 
-from Panda import pandaub
 
 from ..Config import Config
 from ..core.managers import edit_or_reply
-from . import CMD_HELP
+from . import CMD_HELP, ilhammansiz_cmd
 
 plugin_category = "plugins"
 
@@ -19,7 +18,7 @@ plugin_category = "plugins"
 thumb_image_path = Config.TMP_DOWNLOAD_DIRECTORY + "/thumb_image.jpg"
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="savethumb$",
     command=("savethumb", plugin_category),
     info={
@@ -51,7 +50,7 @@ async def _(event):
     )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="clearthumb$",
     command=("clearthumb", plugin_category),
     info={
@@ -68,7 +67,7 @@ async def _(event):
     await edit_or_reply(event, "✅ Custom thumbnail cleared successfully.")
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="getthumb$",
     command=("getthumb", plugin_category),
     info={

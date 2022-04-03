@@ -1,7 +1,7 @@
 import pyfiglet
 
 from ..helpers.utils import _format
-from . import _format, deEmojify, edit_delete, edit_or_reply, pandaub
+from . import _format, deEmojify, edit_delete, edit_or_reply, ilhammansiz_cmd
 
 plugin_category = "plugins"
 
@@ -24,7 +24,7 @@ CMD_FIG = {
 }
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="figlet(?: |$)(.*)",
     command=("figlet", plugin_category),
     info={

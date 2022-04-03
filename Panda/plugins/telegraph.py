@@ -4,11 +4,10 @@ from datetime import datetime
 from PIL import Image
 from telegraph import Telegraph, exceptions, upload_file
 
-from Panda import pandaub
 
 from ..Config import Config
 from ..core.managers import edit_or_reply
-from . import BOTLOG, BOTLOG_CHATID
+from . import BOTLOG, BOTLOG_CHATID, ilhammansiz_cmd
 
 plugin_category = "plugins"
 
@@ -23,7 +22,7 @@ def resize_image(image):
     im.save(image, "PNG")
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="(t(ele)?g(raph)?) ?(m|t|media|text)(?: |$)(.*)",
     command=("telegraph", plugin_category),
     info={

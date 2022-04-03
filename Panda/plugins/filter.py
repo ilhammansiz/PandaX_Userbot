@@ -3,7 +3,6 @@ import re
 
 from telethon.utils import get_display_name
 
-from Panda import PandaBot
 
 from ..core.managers import edit_or_reply
 from ..sql_helper.filter_sql import (
@@ -12,12 +11,12 @@ from ..sql_helper.filter_sql import (
     remove_all_filters,
     remove_filter,
 )
-from . import BOTLOG, BOTLOG_CHATID
+from . import BOTLOG, BOTLOG_CHATID, ilhammansiz_cmd
 
 plugin_category = "plugins"
 
 
-@PandaBot.ilhammansiz_cmd(incoming=True)
+@ilhammansiz_cmd(incoming=True)
 async def filter_incoming_handler(event):  # sourcery no-metrics
     if event.sender_id == event.client.uid:
         return
@@ -78,7 +77,7 @@ async def filter_incoming_handler(event):  # sourcery no-metrics
             )
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="filter (.*)",
     command=("filter", plugin_category),
     info={
@@ -143,7 +142,7 @@ async def add_new_filter(event):
     await edit_or_reply(event, f"Error while setting filter for {keyword}")
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="filters$",
     command=("filters", plugin_category),
     info={
@@ -168,7 +167,7 @@ async def on_snip_list(event):
     )
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="stop ([\s\S]*)",
     command=("stop", plugin_category),
     info={
@@ -185,7 +184,7 @@ async def remove_a_filter(event):
         await event.edit("Filter `{} `was deleted successfully".format(filt))
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="rmfilters$",
     command=("rmfilters", plugin_category),
     info={

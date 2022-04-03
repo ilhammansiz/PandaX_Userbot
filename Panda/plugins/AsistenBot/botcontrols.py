@@ -20,7 +20,7 @@ from Panda.helpers.utils import _format
 from Panda.sql_helper.bot_blacklists import check_is_black_list, get_all_bl_users
 from Panda.sql_helper.bot_starters import del_starter_from_db, get_all_starters
 from Panda.sql_helper.globals import addgvar, delgvar, gvarstatus
-from . import BOTLOG, BOTLOG_CHATID
+from . import BOTLOG, BOTLOG_CHATID, bot_cmd, ilhammansiz_cmd
 from .botdata import (
     ban_user_from_bot,
     get_user_and_reason,
@@ -38,7 +38,7 @@ cmhd = Config.COMMAND_HAND_LER
 
 
 
-@PandaBot.bot_cmd(
+@bot_cmd(
     pattern=f"^/broadcast$",
     from_users=Config.OWNER_ID,
 )
@@ -96,7 +96,7 @@ async def bot_broadcast(event):
     await br_cast.edit(b_info, parse_mode="html")
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern=f"bot_users$",
     command=("bot_users", plugin_category),
     info={
@@ -116,7 +116,7 @@ async def ban_starters(event):
     await edit_or_reply(event, msg)
 
 
-@PandaBot.bot_cmd(
+@bot_cmd(
     pattern=f"^/ban\s+(.*)",
     from_users=Config.OWNER_ID,
 )
@@ -151,7 +151,7 @@ async def ban_botpms(event):
     await event.reply(msg)
 
 
-@PandaBot.bot_cmd(
+@bot_cmd(
     pattern=f"^/unban(?: |$)(.*)",
     from_users=Config.OWNER_ID,
 )
@@ -178,7 +178,7 @@ async def ban_botpms(event):
     await event.reply(msg)
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern=f"bblist$",
     command=("bblist", plugin_category),
     info={
@@ -198,7 +198,7 @@ async def ban_starters(event):
     await edit_or_reply(event, msg)
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern=f"bot_antif (on|off)$",
     command=("bot_antif", plugin_category),
     info={

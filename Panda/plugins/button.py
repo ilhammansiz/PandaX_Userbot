@@ -10,7 +10,7 @@ import re
 from telethon import Button
 
 from ..Config import Config
-from . import edit_delete, pandaub, reply_id
+from . import edit_delete, ilhammansiz_cmd, reply_id
 
 plugin_category = "plugins"
 # regex obtained from:
@@ -18,7 +18,7 @@ plugin_category = "plugins"
 BTN_URL_REGEX = re.compile(r"(\[([^\[]+?)\]\<buttonurl:(?:/{0,2})(.+?)(:same)?\>)")
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="cbutton(?: |$)(.*)",
     command=("cbutton", plugin_category),
     info={
@@ -85,7 +85,7 @@ async def _(event):
         os.remove(tgbot_reply_message)
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="ibutton(?: |$)(.*)",
     command=("ibutton", plugin_category),
     info={

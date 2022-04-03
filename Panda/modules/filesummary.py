@@ -3,12 +3,11 @@ import time
 
 from prettytable import PrettyTable
 
-from .. import PandaBot
 
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers.tools import media_type
 from ..helpers.utils import _format
-from . import humanbytes
+from . import humanbytes, ilhammansiz_cmd
 
 plugin_category = "modules"
 
@@ -29,7 +28,7 @@ def weird_division(n, d):
     return n / d if d else 0
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="chatfs(?:\s|$)([\s\S]*)",
     command=("chatfs", plugin_category),
     info={
@@ -133,7 +132,7 @@ async def _(event):  # sourcery no-metrics
     await catevent.edit(result, parse_mode="HTML", link_preview=False)
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="userfs(?:\s|$)([\s\S]*)",
     command=("userfs", plugin_category),
     info={

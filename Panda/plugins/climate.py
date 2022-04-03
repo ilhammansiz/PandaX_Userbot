@@ -13,7 +13,7 @@ from pytz import timezone as tz
 from ..Config import Config
 from ..helpers.utils import _format
 from ..sql_helper.globals import addgvar, gvarstatus
-from . import edit_or_reply, logging, pandaub, reply_id
+from . import edit_or_reply, ilhammansiz_cmd, logging, reply_id
 
 plugin_category = "plugins"
 
@@ -44,7 +44,7 @@ def sun(unix, ctimezone):
     return datetime.fromtimestamp(unix, tz=ctimezone).strftime("%I:%M %p")
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="climate(?: |$)(.*)",
     command=("climate", plugin_category),
     info={
@@ -131,7 +131,7 @@ async def get_weather(event):  # sourcery no-metrics
     )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="setcity(?: |$)(.*)",
     command=("setcity", plugin_category),
     info={
@@ -180,7 +180,7 @@ async def set_default_city(event):
     await edit_or_reply(event, f"`Set default event as {cityname}, {fullc_n}.`")
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="weather(?: |$)(.*)",
     command=("weather", plugin_category),
     info={
@@ -201,7 +201,7 @@ async def _(event):
     await edit_or_reply(event, output, parse_mode=_format.parse_pre)
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="wttr(?: |$)(.*)",
     command=("wttr", plugin_category),
     info={

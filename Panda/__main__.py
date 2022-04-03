@@ -8,8 +8,8 @@ import sys
 import Panda
 from Panda import utils
 LOGS = Panda.core.logger.logging.getLogger("PandaUserbot")
-from .utils import P, M, V, A
-
+from .utils import A, M, P
+from pytgcalls import idle
 
 ## Memulai ••••••••••√√√√√•••••••
 
@@ -25,7 +25,6 @@ except Exception as e:
 async def memulai():
     await utils.loads(f"{P}")
     await utils.loads(f"{M}")
-    await utils.buka(f"{V}")
     await utils.buka(f"{A}")
     
 
@@ -38,11 +37,15 @@ def start():
 
 if __name__ == "__main__":
     start()
+    Panda.VcBot.start()
+    idle()
     try:
         if len(sys.argv) not in (1, 3, 4):
             Panda.PandaBot.disconnect()
         else:
             Panda.PandaBot.run_until_disconnected()
+    except (ConnectionError, KeyboardInterrupt, NotImplementedError, SystemExit):
+        pass
     except Exception as e:
         LOGS.error(f"{e}")
         sys.exit()

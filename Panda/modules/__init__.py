@@ -1,3 +1,7 @@
+# Copyright (C) 2020 Catuserbot <https://github.com/sandy1709/catuserbot>
+# Import Panda Userbot
+# Recode by Ilham Mansiz
+# ••••••••••••••••••••••√•••••••••••••√√√••••••••
 
 
 import math
@@ -18,6 +22,7 @@ from ..core.managers import edit_delete, edit_or_reply
 from ..core.session import PandaBot
 from ..helpers import *
 from ..helpers.utils import _format, _pandatools, _pandautils, install_pip, reply_id
+from ..core.cmd_user import ilhammansiz_cmd, bot_cmd, register
 
 # =================== CONSTANT ===================
 bot = PandaBot

@@ -1,13 +1,12 @@
 from asyncio.exceptions import TimeoutError
 
 from telethon.errors.rpcerrorlist import YouBlockedUserError
-
-from Panda import pandaub
+from . import ilhammansiz_cmd
 
 plugin_category = "plugins"
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="sa$",
     command=("sa", plugin_category),
     info={

@@ -4,13 +4,13 @@ import requests
 
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers.utils import _pandautils, reply_id
-from . import PandaBot 
+from . import PandaBot, register 
 pandaub = PandaBot
 
 plugin_category = "modules"
 
 
-@PandaBot.register(
+@register(
     pattern="gifs(?:\s|$)([\s\S]*)",
     command=("gifs", plugin_category),
     help={

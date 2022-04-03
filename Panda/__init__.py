@@ -13,7 +13,7 @@ from redis import StrictRedis
 
 from .core.logger import logging
 from .sql_helper.globals import addgvar, delgvar, gvarstatus
-from .core.client import PandaUserbotSession, dual_duall
+from .core.client import dual_duall
 from .sql_helper import sqldb
 from .sql_helper import mongodb
 from .sql_helper.db import BaseDB
@@ -23,6 +23,9 @@ from telethon.sessions import StringSession
 from .Var import Var
 from telethon.sync import TelegramClient, custom, events
 from Panda.versions import __version__, __license__, __author__, __copyright__
+from pytgcalls import PyTgCalls
+
+
 
 Mongodb = mongodb
 SqL = sqldb
@@ -61,7 +64,7 @@ try:
         PandaBot = None
     else:
          if Var.STRING_SESSION:
-             PandaBot = PandaUserbotSession(
+             PandaBot = TelegramClient(
                 session=StringSession(str(Var.STRING_SESSION)),
                 api_id=Var.APP_ID,
                 api_hash=Var.API_HASH,
@@ -75,6 +78,7 @@ except Exception as e:
     print(f"STRING_SESSION {str(e)}")
     sys.exit()
 ######################################
+VcBot = PyTgCalls(PandaBot)
 
 from .helpers.functions.auto import autobot
 
@@ -93,7 +97,7 @@ else:
 
 try:
     if BOT_TOKEN is not None:
-        PandaBot.tgbot = tgbot = PandaUserbotSession(
+        PandaBot.tgbot = tgbot = TelegramClient(
             "BOT_TOKEN",
             api_id=Var.APP_ID,
             api_hash=Var.API_HASH,
@@ -107,6 +111,7 @@ except Exception as e:
     print(f"TOKEN- {str(e)}")
     sys.exit()
 #########
+
 
 if BOT_MODE:
     PandaBot = PandaBot.tgbot = tgbot

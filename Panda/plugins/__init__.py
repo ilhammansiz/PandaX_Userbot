@@ -18,6 +18,7 @@ from ..helpers import *
 from ..helpers.utils import _format, _pandatools, _pandautils, install_pip, reply_id
 from telethon import events
 from ..sql_helper.globals import gvarstatus
+from ..core.cmd_user import ilhammansiz_cmd, bot_cmd, register
 
 # =================== CONSTANT ===================
 def mansiez(**args):

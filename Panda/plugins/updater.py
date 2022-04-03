@@ -7,7 +7,7 @@ import urllib3
 from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 
-from Panda import UPSTREAM_REPO_URL, pandaub
+from Panda import UPSTREAM_REPO_URL
 
 from ..Config import Config
 from ..core.logger import logging
@@ -18,6 +18,7 @@ from ..sql_helper.global_collection import (
     del_keyword_collectionlist,
     get_collectionlist_items,
 )
+from . import ilhammansiz_cmd
 
 plugin_category = "plugins"
 cmdhd = Config.COMMAND_HAND_LER
@@ -170,7 +171,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
     await event.edit("`Deploy was failed better to do manual deploy.`")
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="update(| now)?$",
     command=("update", plugin_category),
     info={
@@ -266,7 +267,7 @@ async def upstream(event):
     return
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="update deploy$",
 )
 async def upstream(event):
@@ -302,7 +303,7 @@ async def upstream(event):
     await deploy(event, repo, ups_rem, ac_br, txt)
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="panda$",
     command=("panda", plugin_category),
     info={

@@ -16,7 +16,7 @@ from ..helpers.utils import _format, get_user_from_event, reply_id
 from ..sql_helper import global_collectionjson as sql
 from ..sql_helper import global_list as sqllist
 from ..sql_helper import pmpermit_sql
-from . import mention
+from . import mention, ilhammansiz_cmd
 
 plugin_category = "plugins"
 LOGS = logging.getLogger(__name__)
@@ -379,7 +379,7 @@ Now you can't do anything unless my master comes online and unblocks you.**"
         return
 
 
-@pandaub.ilhammansiz_cmd(incoming=True, func=lambda e: e.is_private, edited=False)
+@ilhammansiz_cmd(incoming=True, func=lambda e: e.is_private, edited=False)
 async def on_new_private_message(event):
     if gvarstatus("pmpermit") is None:
         return
@@ -401,7 +401,7 @@ async def on_new_private_message(event):
     await do_pm_permit_action(event, chat)
 
 
-@pandaub.ilhammansiz_cmd(outgoing=True, func=lambda e: e.is_private, edited=False)
+@ilhammansiz_cmd(outgoing=True, func=lambda e: e.is_private, edited=False)
 async def you_dm_other(event):
     if gvarstatus("pmpermit") is None:
         return
@@ -581,7 +581,7 @@ async def on_plug_in_callback_query_handler(event):
     await event.edit(text)
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="pmguard (on|off)$",
     command=("pmguard", plugin_category),
     info={
@@ -614,7 +614,7 @@ async def pmpermit_on(event):
             )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="(a|approve)(?: |$)(.*)",
     command=("approve", plugin_category),
     info={
@@ -690,7 +690,7 @@ async def approve_p_m(event):
         )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="(da|disapprove)(?: |$)(.*)",
     command=("disapprove", plugin_category),
     info={
@@ -741,7 +741,7 @@ async def disapprove_p_m(event):
         )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="block(?: |$)(.*)",
     command=("block", plugin_category),
     info={
@@ -797,7 +797,7 @@ async def block_p_m(event):
     )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="unblock(?: |$)(.*)",
     command=("unblock", plugin_category),
     info={
@@ -829,7 +829,7 @@ async def unblock_pm(event):
     )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="listapproved$",
     command=("listapproved", plugin_category),
     info={

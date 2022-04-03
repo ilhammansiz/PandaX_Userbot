@@ -1,11 +1,11 @@
 from telethon.errors import ChatSendInlineForbiddenError, ChatSendStickersForbiddenError
 
-from Panda import bot, pandaub
-
+from Panda import bot
+from . import ilhammansiz_cmd
 plugin_category = "plugins"
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="frog(?: |$)(.*)",
     command=("frog", plugin_category),
     info={

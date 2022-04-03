@@ -92,7 +92,7 @@ class Config(object):
     # progress bar progress
     FINISHED_PROGRESS_STR = os.environ.get("FINISHED_PROGRESS_STR", "▰")
     UNFINISHED_PROGRESS_STR = os.environ.get("UNFINISHED_PROGRESS_STR", "▱")
-    DEVS = os.environ.get("DEVS", "*")
+    DEVS = os.environ.get("DEVS", "©")
     SUDO_ENABLED = False
     # API VARS FOR USERBOT
     # Get your own ACCESS_KEY from http://api.screenshotlayer.com/api/capture for screen shot

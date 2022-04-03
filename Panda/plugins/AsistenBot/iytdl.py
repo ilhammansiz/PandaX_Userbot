@@ -32,7 +32,7 @@ from Panda.helpers.functions.utube import (
     get_ytthumb,
     yt_search_btns,
 )
-from Panda.plugins import BOTLOG_CHATID
+from Panda.plugins import BOTLOG_CHATID, ilhammansiz_cmd
 pandaub = PandaBot
 LOGS = logging.getLogger(__name__)
 BASE_YT_URL = "https://www.youtube.com/watch?v="
@@ -43,7 +43,7 @@ PATH = "./Panda/core/ytsearch.json"
 plugin_category = "plugins"
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="iytdl(?: |$)(.*)",
     command=("iytdl", plugin_category),
     info={

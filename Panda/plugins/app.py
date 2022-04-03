@@ -7,12 +7,12 @@ Fetch App Details from Playstore.
 import bs4
 import requests
 
-from . import ALIVE_NAME, edit_or_reply, pandaub
+from . import ALIVE_NAME, edit_or_reply, ilhammansiz_cmd
 
 plugin_category = "plugins"
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="app (.*)",
     command=("app", plugin_category),
     info={

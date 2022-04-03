@@ -12,7 +12,7 @@ from telethon import types
 from telethon.utils import get_extension
 
 from ..Config import Config
-from . import edit_delete, edit_or_reply, pandaub, progress
+from . import edit_delete, edit_or_reply, ilhammansiz_cmd, progress
 
 thumb_image_path = os.path.join(Config.TMP_DOWNLOAD_DIRECTORY, "thumb_image.jpg")
 plugin_category = "plugins"
@@ -27,7 +27,7 @@ def zipdir(dirName):
     return filePaths
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="zip(?: |$)(.*)",
     command=("zip", plugin_category),
     info={
@@ -68,7 +68,7 @@ async def zip_file(event):
     )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="tar(?: |$)(.*)",
     command=("tar", plugin_category),
     info={
@@ -110,7 +110,7 @@ async def tar_file(event):
     )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="unzip(?: |$)(.*)",
     command=("unzip", plugin_category),
     info={
@@ -193,7 +193,7 @@ async def zip_file(event):  # sourcery no-metrics
         )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="untar(?: |$)(.*)",
     command=("untar", plugin_category),
     info={

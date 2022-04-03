@@ -9,9 +9,8 @@ from PIL import Image, ImageDraw, ImageFont
 
 from ..helpers.utils import _pandautils
 from ..helpers.utils import _pandatools
-from .. import PandaBot
 from ..Config import Config 
-from . import edit_delete, edit_or_reply
+from . import edit_delete, edit_or_reply, ilhammansiz_cmd
 
 runcmd = _pandautils.runcmd
 take_screen_shot = _pandatools.take_screen_shot
@@ -20,7 +19,7 @@ TEMP_DOWNLOAD_DIRECTORY = Config.TMP_DOWNLOAD_DIRECTORY
 plugin_category = "modules"
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="mmf(?: |$)(.*)",
     command=("mmf", plugin_category),
     info={

@@ -1,14 +1,13 @@
 import asyncio
 from datetime import datetime
 
-from Panda import pandaub
-from . import mention
+from . import mention, ilhammansiz_cmd
 from ..core.managers import edit_or_reply
 
 plugin_category = "plugins"
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="ping( -a|$)",
     command=("ping", plugin_category),
     info={

@@ -6,11 +6,10 @@ from pytz import country_names as c_n
 from pytz import country_timezones as c_tz
 from pytz import timezone as tz
 
-from .. import PandaBot
 
 from ..Config import Config
 from ..core.managers import edit_or_reply
-from . import reply_id
+from . import reply_id, ilhammansiz_cmd
 
 plugin_category = "modules"
 
@@ -44,7 +43,7 @@ async def get_tz(con):
         return
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="ctime(?:\s|$)([\s\S]*)(?<![0-9])(?: |$)([0-9]+)?",
     command=("ctime", plugin_category),
     info={
@@ -111,7 +110,7 @@ async def time_func(tdata):
         )
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="time(?:\s|$)([\s\S]*)",
     command=("time", plugin_category),
     info={

@@ -3,12 +3,12 @@
 #from catuserbot
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from . import edit_or_reply, pandaub, reply_id
+from . import edit_or_reply, ilhammansiz_cmd, reply_id
 
 plugin_category = "plugins"
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="score$",
     command=("score", plugin_category),
     info={
@@ -43,7 +43,7 @@ async def _(event):
         )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="cric (.*)",
     command=("cric", plugin_category),
     info={

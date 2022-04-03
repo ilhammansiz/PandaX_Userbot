@@ -24,13 +24,13 @@ from telethon.tl.types import (
     MessageMediaPhoto,
 )
 
-from Panda import pandaub
 
 from ..Config import Config
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers.functions import crop_and_divide
 from ..helpers.tools import media_type
 from ..helpers.utils import _pandatools
+from . import ilhammansiz_cmd
 
 plugin_category = "plugins"
 
@@ -234,7 +234,7 @@ async def add_to_pack(
     return pack, packname
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="kang(?: |$)(.*)",
     command=("kang", plugin_category),
     info={
@@ -386,7 +386,7 @@ async def kang(args):  # sourcery no-metrics
                 )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="pkang(?: |$)(.*)",
     command=("pkang", plugin_category),
     info={
@@ -555,7 +555,7 @@ async def pack_kang(event):  # sourcery no-metrics
     await pandaevent.edit(result)
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="gridpack(?: |$)(.*)",
     command=("gridpack", plugin_category),
     info={
@@ -662,7 +662,7 @@ async def pic2packcmd(event):
             )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="stkrinfo$",
     command=("stkrinfo", plugin_category),
     info={
@@ -710,7 +710,7 @@ async def get_pack_info(event):
     await pandaevent.edit(OUTPUT)
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="stickers ?(.*)",
     command=("stickers", plugin_category),
     info={

@@ -1,13 +1,12 @@
-from Panda import pandaub
 
 from ..core.managers import edit_delete, edit_or_reply
-
+from . import ilhammansiz_cmd
 plugin_category = "plugins"
 
 name = "Profile Photos"
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="poto(?:\s|$)([\s\S]*)",
     command=("poto", plugin_category),
     info={

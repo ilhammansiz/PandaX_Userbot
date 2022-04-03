@@ -17,7 +17,7 @@ from ..core.logger import logging
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers.tools import media_type
 from ..helpers.utils import pastetext, reply_id
-
+from . import ilhammansiz_cmd
 plugin_category = "modules"
 
 extractor = URLExtract()
@@ -38,7 +38,7 @@ def get_key(val):
             return key
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="pcode(?:\s|$)([\s\S]*)",
     command=("pcode", plugin_category),
     info={
@@ -99,7 +99,7 @@ async def paste_img(event):
         await edit_delete(catevent, f"**Error:**\n`{e}`", time=10)
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="(d|p|s|n)?(paste|neko)(?:\s|$)([\S\s]*)",
     command=("paste", plugin_category),
     info={
@@ -173,7 +173,7 @@ async def paste_bin(event):
         await edit_delete(catevent, f"**Error while pasting text:**\n`{e}`")
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     command=("neko", plugin_category),
     info={
         "header": "To paste text to a neko bin.",
@@ -190,7 +190,7 @@ async def _(event):
     # just to show in help menu as seperate
 
 
-@catub.cat_cmd(
+@ilhammansiz_cmd(
     pattern="g(et)?paste(?:\s|$)([\s\S]*)",
     command=("getpaste", plugin_category),
     info={
@@ -252,7 +252,7 @@ async def get_dogbin_content(event):
     await edit_or_reply(catevent, reply_text)
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="paster(?:\s|$)([\s\S]*)",
     command=("paster", plugin_category),
     info={

@@ -2,10 +2,10 @@ from sys import version_info
 
 
 
-branch = f"@PandaUserbot"
+branch = f"@Utama"
 
 
-__Tgl__ = "17"
+__Tgl__ = "27"
 __Bln__ = "03"
 __Thn__ = "2022"
 

@@ -3,14 +3,13 @@ from datetime import datetime
 
 from telethon.tl import functions, types
 
-from Panda import pandaub
 
 from ..Config import Config
 from ..core.logger import logging
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers.tools import media_type
 from ..helpers.utils import _format
-from . import BOTLOG, BOTLOG_CHATID
+from . import BOTLOG, BOTLOG_CHATID, ilhammansiz_cmd
 
 plugin_category = "modules"
 
@@ -34,7 +33,7 @@ class AFK:
 AFK_ = AFK()
 
 
-@pandaub.ilhammansiz_cmd(outgoing=True)
+@ilhammansiz_cmd(outgoing=True)
 async def set_not_afk(event):
     if AFK_.afk_on is False:
         return
@@ -81,7 +80,7 @@ async def set_not_afk(event):
             )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     incoming=True, func=lambda e: bool(e.mentioned or e.is_private)
 )
 async def on_afk(event):  # sourcery no-metrics
@@ -167,7 +166,7 @@ async def on_afk(event):  # sourcery no-metrics
             )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="off(?: |$)(.*)",
     command=("off", plugin_category),
     info={
@@ -227,7 +226,7 @@ async def _(event):
                 )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="moff(?: |$)(.*)",
     command=("moff", plugin_category),
     info={

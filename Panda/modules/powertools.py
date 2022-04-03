@@ -17,14 +17,14 @@ from ..sql_helper.global_collection import (
     get_collectionlist_items,
 )
 from ..sql_helper.globals import addgvar, delgvar, gvarstatus
-from . import BOTLOG, BOTLOG_CHATID, HEROKU_APP_NAME
+from . import BOTLOG, BOTLOG_CHATID, HEROKU_APP_NAME, ilhammansiz_cmd
 
 LOGS = logging.getLogger(__name__)
 plugin_category = "modules"
 catub = PandaBot
 HEROKU_APP = HEROKU_APP_NAME
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="restart$",
     command=("restart", plugin_category),
     info={
@@ -60,7 +60,7 @@ async def _(event):
         LOGS.error(e)
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="shutdown$",
     command=("shutdown", plugin_category),
     info={
@@ -80,7 +80,7 @@ async def _(event):
         os._exit(143)
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="sleep( [0-9]+)?$",
     command=("sleep", plugin_category),
     info={
@@ -104,7 +104,7 @@ async def _(event):
     await event.edit("`OK, I'm awake now.`")
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="notify (on|off)$",
     command=("notify", plugin_category),
     info={

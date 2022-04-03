@@ -2,11 +2,10 @@ import asyncio
 import os
 from os.path import basename
 from typing import Optional, Tuple
-
+from . import ilhammansiz_cmd
 import PIL.ImageOps
 from PIL import Image
 
-from Panda import pandaub
 
 plugin_category = "plugins"
 
@@ -67,7 +66,7 @@ def random_color():
     ]
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="gray(?: |$)(.*)",
     command=("gray", plugin_category),
     info={

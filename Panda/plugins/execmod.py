@@ -1,9 +1,9 @@
-from . import _pandautils, edit_or_reply, pandaub
+from . import _pandautils, edit_or_reply, ilhammansiz_cmd
 
 plugin_category = "plugins"
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="suicide$",
     command=("suicide", plugin_category),
     info={
@@ -21,7 +21,7 @@ async def _(event):
     event = await edit_or_reply(event, OUTPUT)
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="plugins$",
     command=("plugins", plugin_category),
     info={
@@ -37,7 +37,7 @@ async def _(event):
     await edit_or_reply(event, OUTPUT)
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="env$",
     command=("env", plugin_category),
     info={

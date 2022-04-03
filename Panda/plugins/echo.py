@@ -5,7 +5,6 @@ Idea by @BlazingRobonix
 
 from telethon.utils import get_display_name
 
-from Panda import PandaBot
 
 from ..core.managers import edit_delete, edit_or_reply
 from ..sql_helper.echo_sql import (
@@ -17,12 +16,12 @@ from ..sql_helper.echo_sql import (
     remove_echo,
     remove_echos,
 )
-from . import get_user_from_event
+from . import get_user_from_event, ilhammansiz_cmd
 
 plugin_category = "plugins"
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="addecho$",
     command=("addecho", plugin_category),
     info={
@@ -62,7 +61,7 @@ async def echo(event):
         await edit_or_reply(catevent, "Hi")
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="rmecho$",
     command=("rmecho", plugin_category),
     info={
@@ -91,7 +90,7 @@ async def echo(event):
         await edit_or_reply(event, "The user is not activated with echo")
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="delecho( -a)?",
     command=("delecho", plugin_category),
     info={
@@ -137,7 +136,7 @@ async def echo(event):
             )
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="listecho( -a)?$",
     command=("listecho", plugin_category),
     info={
@@ -201,7 +200,7 @@ async def echo(event):  # sourcery no-metrics
     await edit_or_reply(event, output_str)
 
 
-@PandaBot.ilhammansiz_cmd(incoming=True, edited=False)
+@ilhammansiz_cmd(incoming=True, edited=False)
 async def samereply(event):
     if is_echo(event.chat_id, event.sender_id) and (
         event.message.text or event.message.sticker

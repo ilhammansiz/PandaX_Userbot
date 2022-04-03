@@ -5,12 +5,11 @@ from telethon.tl import functions, types
 from telethon.tl.functions.messages import GetStickerSetRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
-from Panda import pandaub
 
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers.tools import media_type
 from ..helpers.utils import _pandautils
-from . import BOTLOG, BOTLOG_CHATID
+from . import BOTLOG, BOTLOG_CHATID, ilhammansiz_cmd
 
 plugin_category = "plugins"
 
@@ -102,7 +101,7 @@ async def spam_function(event, sandy, panda, sleeptimem, sleeptimet, DelaySpam=F
                 )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="spam (.*)",
     command=("spam", plugin_category),
     info={
@@ -127,7 +126,7 @@ async def spammer(event):
     await spam_function(event, sandy, panda, sleeptimem, sleeptimet)
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="spspam$",
     command=("spspam", plugin_category),
     info={
@@ -197,7 +196,7 @@ async def stickerpack_spam(event):
         await event.client.send_file(BOTLOG_CHATID, reqd_sticker_set.documents[0])
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="cspam (.*)",
     command=("cspam", plugin_category),
     info={
@@ -229,7 +228,7 @@ async def tmeme(event):
             )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="wspam (.*)",
     command=("wspam", plugin_category),
     info={
@@ -261,7 +260,7 @@ async def tmeme(event):
             )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="(delayspam|dspam) (.*)",
     command=("delayspam", plugin_category),
     info={

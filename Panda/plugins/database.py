@@ -12,8 +12,8 @@ import heroku3
 import requests
 import urllib3
 
-from Panda import pandaub, SqL
-from . import BOTLOG_CHATID
+from Panda import SqL
+from . import BOTLOG_CHATID, ilhammansiz_cmd
 from ..Config import Config
 from ..core.managers import edit_delete, edit_or_reply
 
@@ -31,7 +31,7 @@ gvarstatus = SqL.getdb
 addgvar = SqL.setdb
 delgvar = SqL.deldb
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="(set|get|del) var (.*)",
     command=("var", plugin_category),
     info={
@@ -122,7 +122,7 @@ async def variable(var):  # sourcery no-metrics
         del heroku_var[variable]
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="usage$",
     command=("usage", plugin_category),
     info={
@@ -192,7 +192,7 @@ async def dyno_usage(dyno):
     )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="(herokulogs|logs)$",
     command=("logs", plugin_category),
     info={
@@ -276,7 +276,7 @@ oldvars = {
 }
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="(set|get|del)db(?: |$)([\s\S]*)",
     command=("db", plugin_category),
     info={

@@ -1,7 +1,7 @@
 # ported from paperplaneExtended by avinashreddy3108 for media support
 from telethon import events
 
-from Panda import pandaub
+from Panda import PandaBot 
 from Panda.core.logger import logging
 
 from ..core.managers import edit_delete, edit_or_reply
@@ -12,13 +12,13 @@ from ..sql_helper.welcome_sql import (
     rm_welcome_setting,
     update_previous_welcome,
 )
-from . import BOTLOG_CHATID
-
+from . import BOTLOG_CHATID, ilhammansiz_cmd
+pandaub = PandaBot
 plugin_category = "plugins"
 LOGS = logging.getLogger(__name__)
 
 
-@pandaub.on(events.ChatAction)
+@PandaBot.on(events.ChatAction)
 async def _(event):  # sourcery no-metrics
     cws = get_current_welcome_settings(event.chat_id)
     if (
@@ -83,7 +83,7 @@ async def _(event):  # sourcery no-metrics
         update_previous_welcome(event.chat_id, current_message.id)
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="setwelcome(?: |$)(.*)",
     command=("setwelcome", plugin_category),
     info={
@@ -145,7 +145,7 @@ async def save_welcome(event):
     await edit_or_reply("Error while setting welcome in this group")
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="clearwelcome$",
     command=("clearwelcome", plugin_category),
     info={
@@ -162,7 +162,7 @@ async def del_welcome(event):
         await edit_or_reply(event, "`Do I have a welcome note here ?`")
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="listwelcome$",
     command=("listwelcome", plugin_category),
     info={
@@ -190,7 +190,7 @@ async def show_welcome(event):
         await event.reply(cws.reply)
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="cleanwelcome (on|off)$",
     command=("cleanwelcome", plugin_category),
     info={

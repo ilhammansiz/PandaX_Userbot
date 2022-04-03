@@ -5,17 +5,16 @@ import os
 
 from telegraph import exceptions, upload_file
 
-from Panda import PandaBot
 
 from ..core.managers import edit_or_reply
 from ..helpers.utils import _pandatools, reply_id
-from . import convert_toimage, deEmojify, phcomment, threats, trap, trash
+from . import convert_toimage, deEmojify, phcomment, threats, trap, trash, ilhammansiz_cmd
 _cattools = _pandatools
 
 plugin_category = "modules"
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="trash$",
     command=("trash", plugin_category),
     info={
@@ -55,7 +54,7 @@ async def catbot(event):
     await event.client.send_file(event.chat_id, cat, reply_to=catid)
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="threats$",
     command=("threats", plugin_category),
     info={
@@ -94,7 +93,7 @@ async def catbot(event):
     await event.client.send_file(event.chat_id, cat, reply_to=catid)
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="trap(?:\s|$)([\s\S]*)",
     command=("trap", plugin_category),
     info={
@@ -143,7 +142,7 @@ async def catbot(event):
     await event.client.send_file(event.chat_id, cat, reply_to=catid)
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="phub(?:\s|$)([\s\S]*)",
     command=("phub", plugin_category),
     info={

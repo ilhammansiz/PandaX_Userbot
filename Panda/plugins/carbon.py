@@ -10,7 +10,7 @@ import random
 from carbonnow import Carbon
 from Panda.utils.tools import inline_mention
 from ..core.managers import edit_delete, edit_or_reply
-from Panda import PandaBot
+from . import ilhammansiz_cmd
 plugin_category = "plugins"
 
 all_col = [
@@ -165,7 +165,7 @@ all_col = [
 ]
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="carbon(?: |$)(.*)",
     command=("carbon", plugin_category),
     info={
@@ -209,7 +209,7 @@ async def crbn(event):
 
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="ccarbon(?: |$)(.*)",
     command=("ccarbon", plugin_category),
     info={

@@ -7,7 +7,7 @@ from ..Config import Config
 from ..core import CMD_INFO, GRP_INFO, PLG_INFO
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers.utils import reply_id
-from . import mention
+from . import mention, ilhammansiz_cmd
 cmdprefix = Config.COMMAND_HAND_LER
 
 plugin_category = "plugins"
@@ -125,7 +125,7 @@ async def cmdlist():
     return outstr
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="help ?(-c|-p|-t)? ?(.*)?",
     command=("help", plugin_category),
     info={
@@ -161,7 +161,7 @@ async def _(event):
     await edit_or_reply(event, outstr)
     
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="inline(?: |$)(.*)",
     command=("inline", plugin_category),
     info={
@@ -175,10 +175,9 @@ async def _(event):
 async def _(event):
     reply_to_id = await reply_id(event)
     results = await event.client.inline_query(Config.TG_BOT_USERNAME, "help")
-    botfer = await results[0].click(event.chat_id, reply_to=reply_to_id, hide_via=True)
-    await edit_or_reply(event, botfer)
-
-@pandaub.ilhammansiz_cmd(
+    await results[0].click(event.chat_id, reply_to=reply_to_id, hide_via=True)
+    
+@ilhammansiz_cmd(
     pattern="cmds(?: |$)(.*)",
     command=("cmds", plugin_category),
     info={
@@ -211,7 +210,7 @@ async def _(event):
     )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="s (.*)",
     command=("s", plugin_category),
     info={
@@ -232,7 +231,7 @@ async def _(event):
     await edit_or_reply(event, out)
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="dc$",
     command=("dc", plugin_category),
     info={

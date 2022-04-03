@@ -12,7 +12,7 @@ from ..core.managers import edit_delete, edit_or_reply
 from ..helpers.utils import _format
 from ..sql_helper import gban_sql_helper as gban_sql
 from ..sql_helper.mute_sql import is_muted, mute, unmute
-from . import BOTLOG, BOTLOG_CHATID, admin_groups, get_user_from_event
+from . import BOTLOG, BOTLOG_CHATID, admin_groups, get_user_from_event, ilhammansiz_cmd
 
 plugin_category = "plugins"
 
@@ -40,7 +40,7 @@ UNBAN_RIGHTS = ChatBannedRights(
 )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="gban(?: |$)(.*)",
     command=("gban", plugin_category),
     info={
@@ -124,7 +124,7 @@ async def pandagban(event):  # sourcery no-metrics
             pass
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="ungban(?: |$)(.*)",
     command=("ungban", plugin_category),
     info={
@@ -200,7 +200,7 @@ async def pandagban(event):
             )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="listgban$",
     command=("listgban", plugin_category),
     info={
@@ -225,7 +225,7 @@ async def gablist(event):
     await edit_or_reply(event, GBANNED_LIST)
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="gmute(?: |$)(.*)",
     command=("gmute", plugin_category),
     info={
@@ -291,7 +291,7 @@ async def startgmute(event):
             await reply.forward_to(BOTLOG_CHATID)
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="ungmute(?: |$)(.*)",
     command=("ungmute", plugin_category),
     info={
@@ -354,13 +354,13 @@ async def endgmute(event):
             )
 
 
-@pandaub.ilhammansiz_cmd(incoming=True)
+@ilhammansiz_cmd(incoming=True)
 async def watcher(event):
     if is_muted(event.sender_id, "gmute"):
         await event.delete()
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="gkick(?: |$)(.*)",
     command=("gkick", plugin_category),
     info={

@@ -18,7 +18,6 @@ from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from telethon.tl.functions.messages import SendMediaRequest
 from telethon.utils import get_attributes
 
-from Panda import pandaub
 
 from ..Config import Config
 from ..core.managers import edit_delete, edit_or_reply
@@ -33,7 +32,7 @@ from ..helpers.functions import (
     vid_to_gif,
 )
 from ..helpers.utils import _format, _pandatools, _pandautils, reply_id
-from . import make_gif
+from . import make_gif, ilhammansiz_cmd
 
 plugin_category = "plugins"
 
@@ -48,7 +47,7 @@ PATH = os.path.join("./temp", "temp_vid.mp4")
 thumb_loc = os.path.join(Config.TMP_DOWNLOAD_DIRECTORY, "thumb_image.jpg")
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="spin(?: |$)((-)?(s)?)$",
     command=("spin", plugin_category),
     info={
@@ -146,7 +145,7 @@ async def pic_gifcmd(event):  # sourcery no-metrics
             os.remove(i)
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="circle ?((-)?s)?$",
     command=("circle", plugin_category),
     info={
@@ -305,7 +304,7 @@ async def video_pandafile(event):  # sourcery no-metrics
     await pandaevent.delete()
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="stoi$",
     command=("stoi", plugin_category),
     info={
@@ -343,7 +342,7 @@ async def _(panda_event):
         await event.edit("Syntax : `.stoi` reply to a Telegram normal sticker")
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="itos$",
     command=("itos", plugin_category),
     info={
@@ -388,7 +387,7 @@ async def silently_send_message(conv, text):
     return response
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="ttf (.*)",
     command=("ttf", plugin_category),
     info={
@@ -413,7 +412,7 @@ async def get(event):
         await edit_or_reply(event, "reply to text message as `.ttf <file name>`")
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="ftoi$",
     command=("ftoi", plugin_category),
     info={
@@ -454,7 +453,7 @@ async def on_file_to_photo(event):
     await pandat.delete()
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="gif(?: |$)(.*)",
     command=("gif", plugin_category),
     info={
@@ -522,7 +521,7 @@ async def _(event):  # sourcery no-metrics
             os.remove(files)
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="nfc (mp3|voice)",
     command=("nfc", plugin_category),
     info={
@@ -633,7 +632,7 @@ async def _(event):
             await event.delete()
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="itog(?: |$)((-)?(r|l|u|d|s|i)?)$",
     command=("itog", plugin_category),
     info={
@@ -715,7 +714,7 @@ async def pic_gifcmd(event):
             os.remove(i)
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="vtog ?([0-9.]+)?$",
     command=("vtog", plugin_category),
     info={

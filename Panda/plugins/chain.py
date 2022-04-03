@@ -1,11 +1,11 @@
 from telethon.tl.functions.messages import SaveDraftRequest
 
-from . import pandaub
+from . import ilhammansiz_cmd
 
 plugin_category = "plugins"
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="chain$",
     command=("chain", plugin_category),
     info={

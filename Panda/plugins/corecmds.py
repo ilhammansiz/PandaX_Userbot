@@ -9,8 +9,8 @@ from . import (
     SUDO_LIST,
     edit_delete,
     edit_or_reply,
-    pandaub,
     reply_id,
+    ilhammansiz_cmd,
 )
 
 plugin_category = "plugins"
@@ -19,7 +19,7 @@ DELETE_TIMEOUT = 5
 thumb_image_path = os.path.join(Config.TMP_DOWNLOAD_DIRECTORY, "thumb_image.jpg")
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="install$",
     command=("install", plugin_category),
     info={
@@ -55,7 +55,7 @@ async def install(event):
             os.remove(downloaded_file_name)
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="load (.*)",
     command=("load", plugin_category),
     info={
@@ -82,7 +82,7 @@ async def load(event):
         )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="send (.*)",
     command=("send", plugin_category),
     info={
@@ -114,7 +114,7 @@ async def send(event):
         await edit_or_reply(event, "404: File Not Found")
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="unload (.*)",
     command=("unload", plugin_category),
     info={
@@ -134,7 +134,7 @@ async def unload(event):
         await edit_or_reply(event, f"Successfully unload {shortname}\n{str(e)}")
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="uninstall (.*)",
     command=("uninstall", plugin_category),
     info={

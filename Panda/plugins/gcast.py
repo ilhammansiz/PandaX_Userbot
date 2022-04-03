@@ -6,13 +6,13 @@ import asyncio
 
 from telethon.errors.rpcerrorlist import FloodWaitError
 
-from Panda import PandaBot
 import Panda
+from . import ilhammansiz_cmd
 plugin_category = "plugins"
 
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="gcast(?: |$)(.*)",
     command=("gcast", plugin_category),
     info={
@@ -53,7 +53,7 @@ async def gcast(event):
 
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="gucast(?: |$)(.*)",
     command=("gucast", plugin_category),
     info={

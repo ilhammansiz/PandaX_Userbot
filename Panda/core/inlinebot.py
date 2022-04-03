@@ -60,8 +60,6 @@ def ibuild_keyboard(buttons):
 import re
 import time
 
-
-
 from ..Config import Config
 
 CUSTOM_HELP_TEXT = SqL.getdb("HELP_TEXT_INLINE") or  "🛠 INLINE MENU 🛠"
@@ -74,7 +72,7 @@ def settingvar(dat):
     return ultr
 
 def main_menu():
-    text = f"**{CUSTOM_HELP_TEXT}**\n\n  **Pengguna :** {mention}\n  Plugins:** {len(GRP_INFO['plugins'])}\n**  Modules: **{len(GRP_INFO['modules'])}**\n  Commands:** {len(CMD_INFO)}\n**"
+    text = f"**{CUSTOM_HELP_TEXT}**\n\n  **Owner :** {mention}\n  Number of Module:** {len(PLG_INFO)}**\n  Commands:** {len(CMD_INFO)}\n**"
     buttons = [
         (
             Button.url(
@@ -88,11 +86,11 @@ def main_menu():
         ),
         (
             Button.inline(
-                f"✅ Plugins ({len(GRP_INFO['plugins'])})",
+                f"👤 USER ({len(GRP_INFO['plugins'])})",
                 data=f"plugins_menu",
             ),
             Button.inline(
-                f"☑️ Modules ({len(GRP_INFO['modules'])})",
+                f"👾 BOT ({len(GRP_INFO['modules'])})",
                 data=f"modules_menu",
             ),
         ),

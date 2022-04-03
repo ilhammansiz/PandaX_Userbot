@@ -5,16 +5,15 @@ from telethon.errors import BadRequestError
 from telethon.tl.functions.channels import EditAdminRequest
 from telethon.tl.types import ChatAdminRights
 
-from Panda import PandaBot
 
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers.utils import get_user_from_event
-from . import ALIVE_NAME
+from . import ALIVE_NAME, register 
 
 plugin_category = "modules"
 
 
-@PandaBot.register(
+@register(
     pattern="f(?:\s|$)([\s\S]*)",
     command=("f", plugin_category),
     help={
@@ -78,7 +77,7 @@ async def _(event):
         return
 
 
-@PandaBot.register(
+@register(
     pattern="prankpromote(?:\s|$)([\s\S]*)",
     command=("prankpromote", plugin_category),
     help={
@@ -110,7 +109,7 @@ async def _(event):
     await pandaevent.edit("`Promoted Successfully! Now gib Party`")
 
 
-@PandaBot.register(
+@register(
     pattern="padmin$",
     command=("padmin", plugin_category),
     help={

@@ -1,8 +1,7 @@
 from telethon.utils import pack_bot_file_id
 
-from Panda import pandaub
 from Panda.core.logger import logging
-
+from . import ilhammansiz_cmd
 from ..core.managers import edit_delete, edit_or_reply
 
 plugin_category = "plugins"
@@ -10,7 +9,7 @@ plugin_category = "plugins"
 LOGS = logging.getLogger(__name__)
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="(get_id|id)(?: |$)(.*)",
     command=("id", plugin_category),
     info={

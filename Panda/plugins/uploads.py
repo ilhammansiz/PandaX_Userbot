@@ -10,11 +10,10 @@ from hachoir.parser import createParser
 from pySmartDL import SmartDL
 from telethon.tl.types import DocumentAttributeVideo
 
-from Panda import pandaub
 
 plugin_category = "plugins"
 from ..Config import Config
-
+from . import ilhammansiz_cmd
 
 async def progress(current, total, event, start, type_of_ps, file_name=None):
     """Generic progress_callback for uploads and downloads."""
@@ -75,7 +74,7 @@ def time_formatter(milliseconds: int) -> str:
     return tmp[:-2]
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="download( -f)? ([\s\S]*)",
     command=("download", plugin_category),
     info={
@@ -164,7 +163,7 @@ async def download(target_file):
         await target_file.edit("Reply to a message to download to my local server.")
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="uploadir( -f)? ([\s\S]*)",
     command=("uploadir", plugin_category),
     info={
@@ -262,7 +261,7 @@ async def uploadir(udir_event):
         await udir_event.edit("404: Directory Not Found")
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="uploadi( -f)? ([\s\S]*)",
     command=("uploadi", plugin_category),
     info={
@@ -350,7 +349,7 @@ def extract_w_h(file):
         return width, height
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="uploadas( -f)? ([\s\S]*)",
     command=("uploadas", plugin_category),
     info={

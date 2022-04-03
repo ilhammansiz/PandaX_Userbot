@@ -4,11 +4,11 @@ from time import sleep
 from telethon import events
 
 from Panda import PandaBot
-
+from . import register
 plugin_category = "modules"
 
 
-@PandaBot.register(
+@register(
     pattern="sayang$",
     command=("sayang", plugin_category),
     help={
@@ -44,7 +44,7 @@ async def koc(e):
         await e.edit("GA DITERIMA🥺🥺💞")
 
 
-@PandaBot.register(
+@register(
     pattern="dino$",
     command=("dino", plugin_category),
     help={
@@ -109,7 +109,7 @@ async def typewriter(typew):
     await typew.edit("`-NUNGGUIN YA DAH HABIS BATERAINYA☹️-`")
 
 
-@PandaBot.register(
+@register(
     pattern="gabut$",
     command=("gabut", plugin_category),
     help={
@@ -380,7 +380,7 @@ async def koc(e):
         await e.edit("`GABUT`")
 
 
-@PandaBot.register(
+@register(
     pattern="terkadang$",
     command=("terkadang", plugin_category),
     help={
@@ -406,7 +406,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@PandaBot.register(
+@register(
     pattern="mf$",
     command=("mf", plugin_category),
     help={
@@ -457,7 +457,7 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
-@PandaBot.register(
+@register(
     pattern="gombal$",
     command=("gombal", plugin_category),
     help={
@@ -492,7 +492,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@PandaBot.register(
+@register(
     pattern="mantan$",
     command=("mantan", plugin_category),
     help={
@@ -533,7 +533,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@PandaBot.register(
+@register(
     pattern="sedih$",
     command=("sedih", plugin_category),
     help={
@@ -568,7 +568,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@PandaBot.register(
+@register(
     pattern="salam$",
     command=("salam", plugin_category),
     help={
@@ -587,7 +587,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@PandaBot.register(
+@register(
     pattern="jawab$",
     command=("jawab", plugin_category),
     help={
@@ -606,7 +606,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@PandaBot.register(
+@register(
     pattern="pantun$",
     command=("pantun", plugin_category),
     help={
@@ -669,7 +669,7 @@ async def koc(e):
 # Create by myself @localheart
 
 
-@PandaBot.register(
+@register(
     pattern="galau$",
     command=("galau", plugin_category),
     help={
@@ -700,7 +700,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@PandaBot.register(
+@register(
     pattern="sad$",
     command=("sad", plugin_category),
     help={
@@ -731,7 +731,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@PandaBot.register(
+@register(
     pattern="razia$",
     command=("razia", plugin_category),
     help={
@@ -762,7 +762,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@PandaBot.register(
+@register(
     pattern="wkwk$",
     command=("wkwk", plugin_category),
     help={
@@ -793,7 +793,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@PandaBot.register(
+@register(
     pattern="melamar$",
     command=("melamar", plugin_category),
     help={
@@ -824,7 +824,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@PandaBot.register(
+@register(
     pattern="buaya$",
     command=("buaya", plugin_category),
     help={
@@ -855,7 +855,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@PandaBot.register(
+@register(
     pattern="yang$",
     command=("yang", plugin_category),
     help={
@@ -886,7 +886,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@PandaBot.register(
+@register(
     pattern="raziamasker$",
     command=("eaziamasker", plugin_category),
     help={
@@ -954,7 +954,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@PandaBot.register(
+@register(
     pattern="jalan$",
     command=("jalan", plugin_category),
     help={
@@ -1115,7 +1115,7 @@ async def koc(e):
 # Create by myself @localheart
 
 
-@PandaBot.register(
+@register(
     pattern="fuck$",
     command=("fuck", plugin_category),
     help={

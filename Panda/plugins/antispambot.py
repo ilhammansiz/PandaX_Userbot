@@ -9,7 +9,7 @@ from telethon.tl.types import ChannelParticipantsAdmins
 from ..Config import Config
 from ..sql_helper.gban_sql_helper import get_gbanuser, is_gbanned
 from ..utils import is_admin
-from . import BOTLOG, BOTLOG_CHATID, edit_or_reply, logging, pandaub, spamwatch
+from . import BOTLOG, BOTLOG_CHATID, edit_or_reply, logging, pandaub, spamwatch, ilhammansiz_cmd
 
 LOGS = logging.getLogger(__name__)
 plugin_category = "plugins"
@@ -100,7 +100,7 @@ if Config.ANTISPAMBOT_BAN:
             )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="cascheck$",
     command=("cascheck", plugin_category),
     info={
@@ -148,7 +148,7 @@ async def caschecker(event):
     await pandaevent.edit(text)
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="spamcheck$",
     command=("spamcheck", plugin_category),
     info={

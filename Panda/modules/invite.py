@@ -9,10 +9,9 @@ from telethon.tl.functions.channels import GetFullChannelRequest
 from telethon.tl.functions.messages import GetFullChatRequest
 
 from ..core.managers import edit_delete, edit_or_reply
-
+from . import ilhammansiz_cmd
 plugin_category = "modules"
 
-from Panda import pandaub
 
 async def get_chatinfo(event):
     chat = event.pattern_match.group(1)
@@ -56,7 +55,7 @@ def user_full_name(user):
     full_name = " ".join(names)
     return full_name
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="inviteall ([\s\S]*)",
     command=("inviteall", plugin_category),
     info={
@@ -102,7 +101,7 @@ async def get_users(event):
         f"**Terminal Finished** \n\n• Successfully Invited `{s}` people \n• failed to invite `{f}` people"
     )
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="invite ([\s\S]*)",
     command=("invite", plugin_category),
     info={

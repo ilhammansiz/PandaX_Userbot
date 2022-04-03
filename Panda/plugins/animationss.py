@@ -1,13 +1,13 @@
 
 import asyncio
 
-from . import edit_or_reply, PandaBot
+from . import edit_or_reply, PandaBot, ilhammansiz_cmd
 pandaub = PandaBot
 
 plugin_category = "modules"
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="loading$",
     command=("loading", plugin_category),
     info={
@@ -26,7 +26,7 @@ async def _(event):
         await event.edit(animation_chars[i % 4])
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="asquare$",
     command=("asquare", plugin_category),
     info={
@@ -45,7 +45,7 @@ async def _(event):
         await event.edit(animation_chars[i % 4])
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="up$",
     command=("up", plugin_category),
     info={
@@ -64,7 +64,7 @@ async def _(event):
         await event.edit(animation_chars[i % 4])
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="round$",
     command=("round", plugin_category),
     info={
@@ -83,7 +83,7 @@ async def _(event):
         await event.edit(animation_chars[i % 4])
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="hart$",
     command=("hart", plugin_category),
     info={
@@ -102,7 +102,7 @@ async def _(event):
         await event.edit(animation_chars[i % 4])
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="anim$",
     command=("anim", plugin_category),
     info={
@@ -132,7 +132,7 @@ async def _(event):
         await event.edit(animation_chars[i % 10])
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="fnl$",
     command=("fnl", plugin_category),
     info={
@@ -151,7 +151,7 @@ async def _(event):
         await event.edit(animation_chars[i % 6])
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="monkey$",
     command=("monkey", plugin_category),
     info={
@@ -170,7 +170,7 @@ async def _(event):
         await event.edit(animation_chars[i % 6])
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="herber$",
     command=("herber", plugin_category),
     info={
@@ -200,7 +200,7 @@ async def _(event):
         await event.edit(animation_chars[i % 10])
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="hand$",
     command=("hand", plugin_category),
     info={
@@ -233,7 +233,7 @@ async def _(event):
         await event.edit(animation_chars[i % 13])
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="gsg$",
     command=("gsg", plugin_category),
     info={
@@ -265,7 +265,7 @@ async def _(event):
         await event.edit(animation_chars[i % 12])
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="theart$",
     command=("theart", plugin_category),
     info={

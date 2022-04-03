@@ -2,12 +2,11 @@ import string
 
 from telethon.tl.types import Channel
 
-from Panda import pandaub
 from Panda.core.logger import logging
 
 from ..Config import Config
 from ..core.managers import edit_or_reply
-
+from . import ilhammansiz_cmd
 plugin_category = "plugins"
 
 LOGS = logging.getLogger(__name__)
@@ -31,7 +30,7 @@ async def all_groups_id(panda):
     return pandagroups
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="frwd$",
     command=("frwd", plugin_category),
     info={
@@ -62,7 +61,7 @@ async def _(event):
             LOGS.info(str(e))
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="resend$",
     command=("resend", plugin_category),
     info={
@@ -82,7 +81,7 @@ async def _(event):
     await event.respond(m)
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="fpost (.*)",
     command=("fpost", plugin_category),
     info={

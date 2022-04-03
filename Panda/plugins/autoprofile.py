@@ -28,6 +28,7 @@ from . import (
     edit_delete,
     logging,
     pandaub,
+    ilhammansiz_cmd,
 )
 
 plugin_category = "plugins"
@@ -254,7 +255,7 @@ async def autopfp_start():
         AUTOPFP_START = gvarstatus("autopfp_strings") is not None
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="batmanpfp$",
     command=("batmanpfp", plugin_category),
     info={
@@ -275,7 +276,7 @@ async def _(event):
     await autopfp_start()
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="thorpfp$",
     command=("thorpfp", plugin_category),
     info={
@@ -296,7 +297,7 @@ async def _(event):
     await autopfp_start()
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="autopic ?(.*)",
     command=("autopic", plugin_category),
     info={
@@ -343,7 +344,7 @@ async def _(event):
     await autopicloop()
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="digitalpfp$",
     command=("digitalpfp", plugin_category),
     info={
@@ -367,7 +368,7 @@ async def _(event):
     await digitalpicloop()
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="bloom$",
     command=("bloom", plugin_category),
     info={
@@ -398,7 +399,7 @@ async def _(event):
     await bloom_pfploop()
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="autoname$",
     command=("autoname", plugin_category),
     info={
@@ -417,7 +418,7 @@ async def _(event):
     await autoname_loop()
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="autobio$",
     command=("autobio", plugin_category),
     info={
@@ -436,7 +437,7 @@ async def _(event):
     await autobio_loop()
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="end (.*)",
     command=("end", plugin_category),
     info={

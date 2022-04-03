@@ -5,8 +5,8 @@
 # Version sql
 #Panda Userbot
 # Yang Ngapus anak anjeng capek lah aku port nya :(
-
-
+## Udh gak kepake
+"""
 
 import asyncio
 import os
@@ -51,7 +51,7 @@ from Panda.utils.vceor import eor, eod
 from PandaXBahasa import get_string
 from Panda.Config import Config
 from Panda.core.data import _sudousers_list
-
+from Panda.core.cmd_user import ilhammansiz_cmd
 HNDLR = Config.COMMAND_HAND_LER
 asst = PandaBot.tgbot
 UltVer = "VcPanda" 
@@ -308,7 +308,7 @@ async def get_from_queue(chat_id):
     return song, title, link, thumb, from_user, play_this, duration
 
 
-# --------------------------------------------------
+
 
 
 async def download(query):
@@ -407,3 +407,4 @@ async def file_download(event, reply, fast_download=True):
     return dl, thumb, title, reply.message_link, duration
 
 
+"""

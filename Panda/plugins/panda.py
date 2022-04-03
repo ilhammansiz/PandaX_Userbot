@@ -3,12 +3,12 @@ from time import sleep
 
 from telethon import events
 
-from Panda import bot, pandaub
-
+from Panda import bot
+from . import ilhammansiz_cmd
 plugin_category = "modules"
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="sayang$",
     command=("sayang", plugin_category),
     info={
@@ -44,7 +44,7 @@ async def koc(e):
         await e.edit("GA DITERIMA🥺🥺💞")
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="dino$",
     command=("dino", plugin_category),
     info={
@@ -109,7 +109,7 @@ async def _(typew):
     await typew.edit("`-NUNGGUIN YA DAH HABIS BATERAINYA☹️-`")
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="gabut$",
     command=("gabut", plugin_category),
     info={
@@ -380,7 +380,7 @@ async def koc(e):
         await e.edit("`GABUT`")
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="terkadang$",
     command=("terkadang", plugin_category),
     info={
@@ -406,7 +406,7 @@ async def _(typew):
 # Create by myself @localheart
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="mf$",
     command=("mf", plugin_category),
     info={
@@ -457,7 +457,7 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="gombal$",
     command=("gombal", plugin_category),
     info={
@@ -492,7 +492,7 @@ async def _(typew):
 # Create by myself @localheart
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="mantan$",
     command=("mantan", plugin_category),
     info={
@@ -533,7 +533,7 @@ async def _(typew):
 # Create by myself @localheart
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="sedih$",
     command=("sedih", plugin_category),
     info={
@@ -568,7 +568,7 @@ async def _(typew):
 # Create by myself @localheart
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="salam$",
     command=("salam", plugin_category),
     info={
@@ -587,7 +587,7 @@ async def _(typew):
 # Create by myself @localheart
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="jawab$",
     command=("jawab", plugin_category),
     info={
@@ -606,7 +606,7 @@ async def _(typew):
 # Create by myself @localheart
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="pantun$",
     command=("pantun", plugin_category),
     info={
@@ -669,7 +669,7 @@ async def koc(e):
 # Create by myself @localheart
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="galau$",
     command=("galau", plugin_category),
     info={
@@ -700,7 +700,7 @@ async def _(typew):
 # Create by myself @localheart
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="sad$",
     command=("sad", plugin_category),
     info={
@@ -731,7 +731,7 @@ async def _(typew):
 # Create by myself @localheart
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="razia$",
     command=("razia", plugin_category),
     info={
@@ -762,7 +762,7 @@ async def _(typew):
 # Create by myself @localheart
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="wkwk$",
     command=("wkwk", plugin_category),
     info={
@@ -793,7 +793,7 @@ async def _(typew):
 # Create by myself @localheart
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="melamar$",
     command=("melamar", plugin_category),
     info={
@@ -824,7 +824,7 @@ async def _(typew):
 # Create by myself @localheart
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="buaya$",
     command=("buaya", plugin_category),
     info={
@@ -855,7 +855,7 @@ async def _(typew):
 # Create by myself @localheart
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="yang$",
     command=("yang", plugin_category),
     info={
@@ -886,7 +886,7 @@ async def _(typew):
 # Create by myself @localheart
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="raziamasker$",
     command=("raziamasker", plugin_category),
     info={
@@ -954,7 +954,7 @@ async def _(typew):
 # Create by myself @localheart
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="jalan$",
     command=("jalan", plugin_category),
     info={
@@ -1115,7 +1115,7 @@ async def koc(e):
 # Create by myself @localheart
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="fuck$",
     command=("fuck", plugin_category),
     info={

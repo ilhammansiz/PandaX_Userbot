@@ -1,9 +1,9 @@
-from Panda import bot, pandaub
-
+from Panda import bot
+from . import ilhammansiz_cmd
 plugin_category = "modules"
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="pcast(?: |$)(.*)",
     command=("pcast", plugin_category),
     info={

@@ -1,14 +1,13 @@
 import requests
 from bs4 import BeautifulSoup
 
-from .. import PandaBot
 
 from ..core.managers import edit_or_reply
-
+from . import ilhammansiz_cmd
 plugin_category = "modules"
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="filext(?:\s|$)([\s\S]*)",
     command=("filext", plugin_category),
     info={

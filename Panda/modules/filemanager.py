@@ -5,17 +5,16 @@ import shutil
 import time
 from pathlib import Path
 
-from .. import PandaBot
 
 from ..Config import Config
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers.utils import _format, _pandautils as _catutils
-from . import humanbytes
+from . import humanbytes, ilhammansiz_cmd
 
 plugin_category = "modules"
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="ls(?:\s|$)([\s\S]*)",
     command=("ls", plugin_category),
     info={
@@ -105,7 +104,7 @@ async def lst(event):  # sourcery no-metrics
         await edit_or_reply(event, msg)
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="rem ([\s\S]*)",
     command=("rem", plugin_category),
     info={
@@ -137,7 +136,7 @@ async def lst(event):
         await edit_or_reply(event, f"successfully removed `{path}` file")
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="mkdir(?:\s|$)([\s\S]*)",
     command=("mkdir", plugin_category),
     info={
@@ -174,7 +173,7 @@ async def _(event):
         await edit_delete(mone, str(e), parse_mode=_format.parse_pre)
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="cpto(?:\s|$)([\s\S]*)",
     command=("cpto", plugin_category),
     info={
@@ -220,7 +219,7 @@ async def _(event):
         await edit_delete(mone, str(e), parse_mode=_format.parse_pre)
 
 
-@PandaBot.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="mvto(?:\s|$)([\s\S]*)",
     command=("mvto", plugin_category),
     info={

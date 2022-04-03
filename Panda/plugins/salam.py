@@ -1,9 +1,9 @@
-from . import edit_or_reply, pandaub
+from . import edit_or_reply, ilhammansiz_cmd
 
 plugin_category = "plugins"
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="p$",
     command=("p", plugin_category),
     info={
@@ -16,7 +16,7 @@ async def _(event):
     event = await edit_or_reply(event, "ASSALAMUALAIKUM WR.WB")
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="l$",
     command=("l", plugin_category),
     info={

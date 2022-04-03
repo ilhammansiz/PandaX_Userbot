@@ -10,8 +10,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from validators.url import url
 
-from Panda import pandaub
-
+from . import ilhammansiz_cmd
 from ..core.logger import logging
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers.functions import name_dl, song_dl, video_dl, yt_search
@@ -33,7 +32,7 @@ SONGBOT_BLOCKED_STRING = "<code>Please unblock @songdl_bot and try again</code>"
 # =========================================================== #
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="song(320)?(?: |$)(.*)",
     command=("song", plugin_category),
     info={
@@ -120,7 +119,7 @@ async def delete_messages(event, chat, from_message):
     await event.client.send_read_acknowledge(chat)
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="vsong(?: |$)(.*)",
     command=("vsong", plugin_category),
     info={
@@ -194,7 +193,7 @@ async def _(event):
             os.remove(files)
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="shazam$",
     command=("shazam", plugin_category),
     info={
@@ -239,7 +238,7 @@ async def shazamcmd(event):
     await pandaevent.delete()
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="song2(?: |$)(.*)",
     command=("song2", plugin_category),
     info={
@@ -291,7 +290,7 @@ async def _(event):
         await delete_messages(event, chat, purgeflag)
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="szm$",
     command=("szm", plugin_category),
     info={

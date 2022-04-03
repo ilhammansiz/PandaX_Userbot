@@ -1,11 +1,10 @@
 from time import sleep
-
-from Panda import pandaub
+from . import ilhammansiz_cmd
 
 plugin_category = "plugins"
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="santet(?: |$)(.*)",
     command=("santet", plugin_category),
     info={

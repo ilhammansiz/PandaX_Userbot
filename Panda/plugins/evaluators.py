@@ -10,7 +10,7 @@ from . import *
 plugin_category = "plugins"
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="exec(?: |$|\n)(.*)",
     command=("exec", plugin_category),
     info={
@@ -50,7 +50,7 @@ async def _(event):
         )
 
 
-@pandaub.ilhammansiz_cmd(
+@ilhammansiz_cmd(
     pattern="eval(?: |$|\n)(.*)",
     command=("eval", plugin_category),
     info={
